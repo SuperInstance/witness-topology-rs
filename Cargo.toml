@@ -1,0 +1,9 @@
+[package]
+name = "witness-topology-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Witness complex for topology approximation from point clouds"
+license = "MIT"
+repository = "https://github.com/SuperInstance/witness-topology-rs"
+
+[dependencies]
