@@ -1,0 +1,77 @@
+[crate]
+name = "witness-topology-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Witness complex for topology approximation from point clouds"
+license = "MIT"
+repository = "https://github.com/SuperInstance/witness-topology-rs"
+language = "rust"
+test_count = 35
+
+[provides]
+capabilities = [
+    "random-landmark-selection",
+    "maxmin-landmark-selection",
+    "euclidean-distance",
+    "distance-matrix",
+    "landmark-distance-projection",
+    "witness-complex-construction",
+    "weak-witness-complex",
+    "relaxed-weak-witness-complex",
+    "simplicial-complex",
+    "simplex-admission",
+    "euler-characteristic",
+    "complex-containment",
+    "persistence-homology",
+    "boundary-matrix-reduction",
+    "persistence-pair-extraction",
+    "betti-numbers",
+    "filtration-value",
+    "multiscale-analysis",
+    "scale-sweep",
+    "witness-variant-comparison",
+    "stability-range",
+    "barcode-extraction",
+    "topological-shape-analysis",
+    "point-cloud-topology",
+]
+
+[requires]
+dependencies = []
+
+[exports]
+modules = ["landmark", "persistence", "scale", "weak_witness", "witness"]
+types = ["Point", "Simplex", "SimplicialComplex"]
+structs = [
+    "SimplicialComplex",
+    "PersistencePair",
+    "ScaleResult",
+]
+functions = [
+    "random_landmarks",
+    "maxmin_landmarks",
+    "euclidean_distance",
+    "distance_matrix",
+    "distances_to_landmarks",
+    "SimplicialComplex::new",
+    "SimplicialComplex::add_simplex",
+    "SimplicialComplex::vertices",
+    "SimplicialComplex::edges",
+    "SimplicialComplex::triangles",
+    "SimplicialComplex::num_simplices",
+    "SimplicialComplex::contains",
+    "SimplicialComplex::euler_characteristic",
+    "build_witness_complex",
+    "build_weak_witness_complex",
+    "build_relaxed_weak_witness_complex",
+    "has_weak_witness",
+    "has_relaxed_weak_witness",
+    "compute_persistence",
+    "filtration_value",
+    "betti_numbers",
+    "PersistencePair::persistence",
+    "multiscale_analysis",
+    "compare_variants",
+    "stability_range",
+    "barcode_at_scale",
+]
